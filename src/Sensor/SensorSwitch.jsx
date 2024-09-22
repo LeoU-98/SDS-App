@@ -1,24 +1,26 @@
-import { CubeTransparentIcon } from "@heroicons/react/24/outline";
 import { Switch } from "@material-tailwind/react";
+import propTypes from "prop-types";
+export default function SensorSwitch({ data }) {
+  const { sensorName, sensorIcon, sensorDesc } = data;
 
-export default function SensorSwitch() {
   return (
-    <div className="flex max-h-24 items-center gap-2 rounded-2xl bg-blue-400 p-2">
-      <CubeTransparentIcon className="size-36" />
-      <p className="text-balance text-sm">
-        PIR sensor detects unauthorized motion in certain areas like burglary
-      </p>
+    <div className="flex max-h-none flex-col items-center gap-2 rounded-2xl bg-white/90 p-2 py-10 md:max-h-32 md:flex-row md:justify-start md:py-2 lg:px-4 xl:px-2">
+      {sensorIcon}
+      <div className="mb-auto text-balance text-center md:mb-0 md:mr-auto md:text-start">
+        <p className="text-lg">{sensorName}</p>
+        <p className="text-xs">{sensorDesc}</p>
+      </div>
       <SwitchCustomStyles />
     </div>
   );
 }
 
-export function SwitchCustomStyles() {
+function SwitchCustomStyles() {
   return (
     <Switch
       id="custom-switch-component"
       ripple={false}
-      className="h-full w-full checked:bg-[#2ec946]"
+      className="checked:bg-blue-violet-500 h-full w-full"
       containerProps={{
         className: "w-8 h-4",
       }}
@@ -28,3 +30,5 @@ export function SwitchCustomStyles() {
     />
   );
 }
+
+SensorSwitch.propTypes = { data: propTypes.object };

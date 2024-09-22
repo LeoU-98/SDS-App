@@ -8,7 +8,7 @@ import {
 import {
   Square3Stack3DIcon,
   ChevronDownIcon,
-  RocketLaunchIcon,
+  WifiIcon,
 } from "@heroicons/react/24/solid";
 
 const navListMenuItems = [
@@ -56,8 +56,8 @@ export default function ManualMenu() {
           </a>
         </MenuHandler>
         <MenuList className="mt-4 hidden w-[36rem] grid-cols-7 gap-3 overflow-visible lg:grid">
-          <div className="col-span-3 grid h-full w-full place-items-center rounded-md bg-blue-500 text-white">
-            <RocketLaunchIcon strokeWidth={1} className="size-28" />
+          <div className="bg-blue-violet-500 col-span-3 grid h-full w-full place-items-center rounded-md text-white">
+            <WifiIcon strokeWidth={1} className="size-28" />
           </div>
           <ul className="col-span-4 flex w-full flex-col gap-1">
             {renderItems}

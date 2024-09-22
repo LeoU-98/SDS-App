@@ -13,7 +13,6 @@ import {
   ChevronDownIcon,
   Cog6ToothIcon,
   InboxArrowDownIcon,
-  LifebuoyIcon,
   PowerIcon,
 } from "@heroicons/react/24/solid";
 
@@ -30,10 +29,7 @@ const profileMenuItems = [
     label: "Inbox",
     icon: InboxArrowDownIcon,
   },
-  {
-    label: "Help",
-    icon: LifebuoyIcon,
-  },
+
   {
     label: "Sign Out",
     icon: PowerIcon,
